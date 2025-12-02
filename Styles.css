@@ -1,3 +1,8 @@
+* {
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     font-family: 'Lato', sans-serif;

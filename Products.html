@@ -15,7 +15,7 @@
 </head>
 
 <body class="box-border scroll-smooth" style="scrollbar-width: none;">
-    <header class="flex px-8 py-3 items-center justify-between bg-green-100 shadow-xl sticky top-0 z-50">
+    <header class="flex px-8 py-3 items-center justify-between bg-green-100 shadow-xl sticky top-0 z-40">
         <h1 class="font-bold text-2xl">Greenden</h1>
         <nav class="hidden font-semibold md:flex gap-3">
             <a class="hover:underline hover:text-black" href="./index.html">Home</a>
@@ -24,12 +24,49 @@
         </nav>
 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-8 md:hidden hover:transform hover:rotate-360 hover:transition-transform hover:duration-600">
+            class="w-8 md:hidden hover:transform hover:rotate-360 hover:transition-transform hover:duration-600"
+            id="openMenu">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
     </header>
 
+    <section class="w-full hidden md:hidden absolute top-0 -right-full z-50 transition-all duration-1000 ease-linear"
+        id="menuOption">
+        <div class="w-full relative flex text-2xl font-bold items-center justify-between py-3 shadow-xl">
+            <h2 class="m-auto text-transparent">Menu</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" id="closeMenu"
+                class="w-8 absolute right-8 md:hidden hover:transform hover:rotate-360 hover:transition-transform hover:duration-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </div>
+
+        <nav class="h-64 grid text-lg font-bold text-center items-center justify-center bg-green-100">
+            <h2 class="text-2xl text-center font-bold self-end">Menu</h2>
+            <a href="./index.html" class="cursor-pointer hover:underline self-end">Home</a>
+            <a href="./Products.html" class="cursor-pointer hover:underline self-center">Products</a>
+            <a href="./Contact.html" class="cursor-pointer hover:underline self-start">Contact</a>
+        </nav>
+    </section>
+
     <main>
+        <section class="flex p-4 lg:p-12 bg-green-100 justify-center gap-4">
+            <div class="content-center md:basis-3/5 xl:text-center">
+                <p>Greenden is an online platform that sells plants, gardening supplies and related products.</p>
+                <h2 class="text-2xl p-4 font-bold">Happiness is availing great offers on each purchase</h2>
+                <div class="flex px-4 gap-4 bg-transparent xl:justify-center">
+                    <button type="button" class="text-white bg-black p-2 rounded">Shop Now</button>
+                    <button type="button" class="bg-transparent p-2 border border-black rounded">Watch
+                        Video</button>
+                </div>
+                <p class="px-4 pt-4">100+ Plant Species | 100+ Clients | Expert Service</p>
+            </div>
+
+            <div class="hidden basis-2/5 md:flex justify-center">
+                <img src="./Assets/Plant Pots.png" alt="Plant Pots" class="px-2 animate-pulse lg:px-4">
+            </div>
+        </section>
+
         <section class="flex flex-col text-center gap-4 px-4 py-8">
             <h1 class="text-2xl font-bold ">Our Products</h1>
             <input type="text" class="w-4/5 p-2 m-auto border border-black" placeholder="Search For Products">
@@ -178,6 +215,8 @@
         </nav>
         <p>&copy; 2025 Greenden</p>
     </footer>
+
+    <script src="Index.js"></script>
 </body>
 
 </html>

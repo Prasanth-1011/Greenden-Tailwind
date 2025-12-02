@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +15,7 @@
 </head>
 
 <body class="box-border scroll-smooth" style="scrollbar-width: none;">
-    <header class="flex px-8 py-3 items-center justify-between bg-green-100 shadow-xl sticky top-0 z-50">
+    <header class="flex px-8 py-3 items-center justify-between bg-green-100 shadow-xl sticky top-0 z-40">
         <h1 class="font-bold text-2xl">Greenden</h1>
         <nav class="hidden font-semibold md:flex gap-3">
             <a class="hover:underline hover:text-black" href="./index.html">Home</a>
@@ -25,10 +24,30 @@
         </nav>
 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-8 md:hidden hover:transform hover:rotate-360 hover:transition-transform hover:duration-600">
+            class="w-8 md:hidden hover:transform hover:rotate-360 hover:transition-transform hover:duration-600"
+            id="openMenu">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
     </header>
+
+    <section class="w-full hidden md:hidden absolute top-0 -right-full z-50 transition-all duration-1000 ease-linear"
+        id="menuOption">
+        <div class="w-full relative flex text-2xl font-bold items-center justify-between py-3 shadow-xl">
+            <h2 class="m-auto text-transparent">Menu</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" id="closeMenu"
+                class="w-8 absolute right-8 md:hidden hover:transform hover:rotate-360 hover:transition-transform hover:duration-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </div>
+
+        <nav class="h-64 grid text-lg font-bold text-center items-center justify-center bg-green-100">
+            <h2 class="text-2xl text-center font-bold self-end">Menu</h2>
+            <a href="./index.html" class="cursor-pointer hover:underline self-end">Home</a>
+            <a href="./Products.html" class="cursor-pointer hover:underline self-center">Products</a>
+            <a href="./Contact.html" class="cursor-pointer hover:underline self-start">Contact</a>
+        </nav>
+    </section>
 
     <main>
         <section class="flex p-4 lg:p-12 bg-green-100 justify-center gap-4">
@@ -62,7 +81,7 @@
                     </p>
                 </div>
 
-                <div class="p-4 border-2 border-black rounded-lg">
+                <div class="p-4 md:border-2 md:border-black rounded-lg">
                     <h2 class="font-bold text-xl text-center pb-2">Trending Collections</h2>
                     <ul class="grid grid-cols-2 gap-2">
                         <li class="border text-center py-2 border-black">Flowering Plants</li>
@@ -291,6 +310,8 @@
         </nav>
         <p>&copy; 2025 Greenden</p>
     </footer>
+
+    <script src="Index.js"></script>
 </body>
 
 </html>
