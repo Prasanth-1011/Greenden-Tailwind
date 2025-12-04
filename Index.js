@@ -17,5 +17,23 @@ closeMenu.addEventListener('click', () => {
     setTimeout(() => {
         menuOption.classList.add('hidden');
         openMenu.classList.remove('hidden');
-    }, 1000);
+    }, 600);
+});
+
+const search = document.getElementById("search");
+const products = document.getElementById("products");
+const plants = document.querySelectorAll("figure");
+
+search.addEventListener('keyup', () => {
+    setTimeout(() => {
+        const searchValue = search.value.toLowerCase();
+        plants.forEach(plant => {
+            const plantName = plant.querySelector("p").textContent.toLowerCase();
+            if (plantName.includes(searchValue)) {
+                plant.classList.remove("hidden");
+            } else {
+                plant.classList.add("hidden");
+            }
+        });
+    }, 300);
 });

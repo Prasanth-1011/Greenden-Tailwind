@@ -24,19 +24,17 @@
         </nav>
 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-8 md:hidden hover:transform hover:rotate-360 hover:transition-transform hover:duration-600"
-            id="openMenu">
+            class="w-8 cursor-pointer md:hidden" id="openMenu">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
     </header>
 
-    <section class="w-full hidden md:hidden absolute top-0 -right-full z-50 transition-all duration-1000 ease-linear"
+    <section class="w-full hidden md:hidden absolute top-0 -right-full z-50 transition-all duration-600 ease-in-out"
         id="menuOption">
         <div class="w-full relative flex text-2xl font-bold items-center justify-between py-3 shadow-xl">
             <h2 class="m-auto text-transparent">Menu</h2>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" id="closeMenu"
-                class="w-8 absolute right-8 md:hidden hover:transform hover:rotate-360 hover:transition-transform hover:duration-600">
+                stroke="currentColor" id="closeMenu" class="w-8 absolute cursor-pointer right-8 md:hidden">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
         </div>
